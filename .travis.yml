@@ -8,7 +8,6 @@ install:
   - npm install -g firebase-tools
   - npm install
 script:
-after_success:
   - firebase functions:config:set admin.type=$type
   - firebase functions:config:set admin.project_id=$project_id
   - firebase functions:config:set admin.private_key_id=$private_key_id
@@ -20,6 +19,7 @@ after_success:
   - firebase functions:config:set admin.auth_provider_x509_cert_url=$auth_provider_x509_cert_url
   - firebase functions:config:set admin.client_x509_cert_url=$client_x509_cert_url
   - npm run-script deploy
+after_success:
 after_failure:
 branches:
   only:
