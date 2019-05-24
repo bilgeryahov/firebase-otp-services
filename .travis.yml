@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 8
+  - 10
 before_install:
   - cd ./firebase-otp-services/
   - cd ./functions/
@@ -18,9 +18,7 @@ script:
   - firebase functions:config:set admin.token_uri=$token_uri
   - firebase functions:config:set admin.auth_provider_x509_cert_url=$auth_provider_x509_cert_url
   - firebase functions:config:set admin.client_x509_cert_url=$client_x509_cert_url
-  - npm run-script deploy
-after_success:
-after_failure:
+  - npm run deploy
 branches:
   only:
   - master
