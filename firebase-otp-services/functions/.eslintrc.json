@@ -8,6 +8,9 @@
   ],
   "extends": "eslint:recommended",
   "rules": {
+    // Removed rule "require using Error objects as Promise rejection reasons" from recommended eslint rules
+    "prefer-promise-reject-errors": 0,
+
     // Removed rule "disallow the use of console" from recommended eslint rules
     "no-console": "off",
 
@@ -76,9 +79,6 @@
 
     // Disallow throwing literals as exceptions
     "no-throw-literal": 2,
-
-    // Require using Error objects as Promise rejection reasons
-    "prefer-promise-reject-errors": 2,
 
     // Enforce “for” loop update clause moving the counter in the right direction
     "for-direction": 2,
